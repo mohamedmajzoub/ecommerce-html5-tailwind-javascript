@@ -5,10 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ecommerce store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="./dist/main.css" rel="stylesheet">
 </head>
 
 <body>
+  <section class="flex justify-end bg-black px-5 py-1.5 lg:py-3 lg:pe-30 text-white">
+    <div class="flex justify-end gap-8 md:gap-40 lg:gap-60">
+      <h2 class="text-gray-300 lg:text-base">Summer Sale For All Swim Suits And Free Express Delivery
+        -
+        OFF 50%!
+        <a class="ms-3 underline" href="#">ShopNow</a>
+      </h2>
+      <select name="language" id="">
+        <option value="EN">English</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="flex justify-between items-center px-30 pt-6 pb-3 border-gray-300 border-b">
+
+    <h1 class="font-bold text-2xl"><a href="#">Exclusive</a></h1>
+    <nav class="flex gap-12">
+      <a href="#">Home</a>
+      <a href="#">Contact</a>
+      <a href="#">About</a>
+      <a href="#">Sign Up</a>
+    </nav>
+    <div class="flex items-center space-x-6">
+      <form class="flex items-center bg-gray-200 rounded-2xl" action="#">
+        <input class="py-2 ps-4 pe-1.5 w-59 text-sm" type="search" placeholder="What are you looking for?">
+        <button type="button" class="right-1.5 relative p-1 text-xl" type="submit"><i
+            class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <div class="space-x-4 text-2xl">
+        <button type="button"><i class="fa-regular fa-heart"></i></button>
+        <button type="button"><i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    </div>
+  </section>
   <h1 class="font-bold text-3xl underline">
     Hello world!
   </h1>
