@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce-html5-tailwind-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run watch:css\" \"npm run serve\" \"npm run build\"",
+    "watch:css": "npx @tailwindcss/cli -i ./src/style.css -o ./dist/main.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/style.css -o ./dist/main.css --minify",
+    "serve": "browser-sync start --server --files \"src/**/*.html, dist/*.css\" --serveStatic \"dist\" --serveStatic \"src\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2"
+  }
+}
