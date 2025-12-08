@@ -25,30 +25,74 @@
     </div>
   </section>
 
-  <section class="flex justify-between items-center px-30 pt-6 pb-3 border-gray-300 border-b">
+  <section class="flex justify-between items-center px-5 lg:px-30 pt-6 pb-3 border-gray-300 border-b">
 
     <h1 class="font-bold text-2xl"><a href="#">Exclusive</a></h1>
-    <nav class="flex gap-12">
-      <a href="#">Home</a>
-      <a href="#">Contact</a>
-      <a href="#">About</a>
-      <a href="#">Sign Up</a>
+    <nav class="hidden lg:flex gap-8">
+      <a class="group relative" href="#">Home
+        <span
+          class="bottom-0 left-0 absolute bg-gray-500 w-full h-0.25 scale-x-100 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+      </a>
+      <a class="group relative" href="#">Contact
+        <span
+          class="bottom-0 left-0 absolute bg-gray-500 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+
+      </a>
+      <a class="group relative" href="#">About
+        <span
+          class="bottom-0 left-0 absolute bg-gray-500 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+
+      </a>
+      <a class="group relative" href="#">Sign Up
+        <span
+          class="bottom-0 left-0 absolute bg-gray-500 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+
+      </a>
     </nav>
     <div class="flex items-center space-x-6">
-      <form class="flex items-center bg-gray-200 rounded-2xl" action="#">
-        <input class="py-2 ps-4 pe-1.5 w-59 text-sm" type="search" placeholder="What are you looking for?">
-        <button type="button" class="right-1.5 relative p-1 text-xl" type="submit"><i
+      <form class="hidden lg:flex items-center bg-gray-200 rounded-2xl overflow-hidden" action="#">
+        <input class="py-2 ps-4 pe-1.5 focus:border-transparent focus:outline-none focus:ring-0 w-55 text-sm"
+          type="search" placeholder="What are you looking for?">
+        <button type="button" class="right-2 relative text-xl" type="submit"><i
             class="fa-solid fa-magnifying-glass"></i></button>
       </form>
       <div class="space-x-4 text-2xl">
         <button type="button"><i class="fa-regular fa-heart"></i></button>
         <button type="button"><i class="fa-solid fa-cart-shopping"></i></button>
+        <button type="button" class="relative p-4" id="hamburger">
+          <div class="space-y-1.25">
+            <span class="block bg-gray-800 w-6 h-0.5 transition-all duration-300"></span>
+            <span class="block bg-gray-800 w-6 h-0.5 transition-all duration-300"></span>
+            <span class="block bg-gray-800 w-6 h-0.5 transition-all duration-300"></span>
+          </div>
+        </button>
       </div>
     </div>
   </section>
   <h1 class="font-bold text-3xl underline">
     Hello world!
   </h1>
+
+  <script>
+    const button = document.getElementById( 'hamburger' );
+    const spans = button.querySelectorAll( 'span' );
+
+    button.addEventListener( 'click', () => {
+      button.classList.toggle( 'open' );
+
+      if ( button.classList.contains( 'open' ) ) {
+        // Transform to X
+        spans[ 0 ].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[ 1 ].style.opacity = '0';
+        spans[ 2 ].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      } else {
+        // Back to hamburger
+        spans[ 0 ].style.transform = 'rotate(0) translate(0, 0)';
+        spans[ 1 ].style.opacity = '1';
+        spans[ 2 ].style.transform = 'rotate(0) translate(0, 0)';
+      }
+    } );
+  </script>
 </body>
 
 </html>
