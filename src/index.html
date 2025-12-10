@@ -12,9 +12,10 @@
 </head>
 
 <body>
-  <section class="flex justify-end bg-black px-5 py-1.5 lg:py-3 lg:pe-30 text-white">
-    <div class="flex justify-end gap-8 md:gap-40 lg:gap-60">
-      <h2 class="text-gray-300 lg:text-base">Summer Sale For All Swim Suits And Free Express Delivery
+  <!-- Start header Massege and Language -->
+  <section class="bg-black text-white">
+    <div class="flex justify-end gap-8 md:gap-40 lg:gap-60 lg:mx-auto px-5 py-1.5 lg:py-3 lg:pe-15 max-w-7xl">
+      <h2 class="text-gray-300 text-sm md:text-base">Summer Sale For All Swim Suits And Free Express Delivery
         -
         OFF 50%!
         <a class="ms-3 underline" href="#">ShopNow</a>
@@ -25,59 +26,127 @@
     </div>
   </section>
 
-  <section class="flex justify-between items-center px-5 lg:px-30 pt-6 pb-3 border-gray-300 border-b">
+  <!-- Start Navbar Menu Desktop -->
+  <section class="relative border-gray-300 border-b">
+    <div class="flex justify-between items-center lg:mx-auto px-5 lg:px-15 pt-6 pb-3 max-w-7xl">
+      <h1 class="font-bold text-2xl"><a href="#">Exclusive</a></h1>
+      <nav class="hidden lg:flex gap-8">
+        <a class="group relative" href="#">Home
+          <span
+            class="bottom-0 left-0 absolute bg-gray-600 w-full h-0.25 scale-x-100 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+        </a>
+        <a class="group relative" href="#">Contact
+          <span
+            class="bottom-0 left-0 absolute bg-gray-600 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
 
-    <h1 class="font-bold text-2xl"><a href="#">Exclusive</a></h1>
-    <nav class="hidden lg:flex gap-8">
-      <a class="group relative" href="#">Home
-        <span
-          class="bottom-0 left-0 absolute bg-gray-500 w-full h-0.25 scale-x-100 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
-      </a>
-      <a class="group relative" href="#">Contact
-        <span
-          class="bottom-0 left-0 absolute bg-gray-500 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+        </a>
+        <a class="group relative" href="#">About
+          <span
+            class="bottom-0 left-0 absolute bg-gray-600 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
 
-      </a>
-      <a class="group relative" href="#">About
-        <span
-          class="bottom-0 left-0 absolute bg-gray-500 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+        </a>
+        <a class="group relative" href="#">Sign Up
+          <span
+            class="bottom-0 left-0 absolute bg-gray-600 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
 
-      </a>
-      <a class="group relative" href="#">Sign Up
-        <span
-          class="bottom-0 left-0 absolute bg-gray-500 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+        </a>
+      </nav>
+      <div class="flex items-center space-x-6">
+        <form class="hidden lg:flex items-center bg-gray-200 rounded-full overflow-hidden" action="#">
+          <input class="py-2 ps-4 pe-1.5 focus:border-transparent focus:outline-none focus:ring-0 w-55 text-sm"
+            type="search" placeholder="What are you looking for?">
+          <button type="button" class="right-2 relative text-xl" type="submit"><i
+              class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="flex items-center gap-4 text-2xl">
+          <button class="cursor-pointer" type="button"><i class="fa-regular fa-heart"></i></button>
+          <button class="cursor-pointer" type="button"><i class="fa-solid fa-cart-shopping"></i></button>
+          <button type="button" class="lg:hidden z-51 relative cursor-pointer" id="hamburger">
+            <div class="space-y-1.25">
+              <span class="block bg-gray-800 w-6 h-0.5 transition-all duration-300"></span>
+              <span class="block bg-gray-800 w-6 h-0.5 transition-all duration-300"></span>
+              <span class="block bg-gray-800 w-6 h-0.5 transition-all duration-300"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
 
-      </a>
-    </nav>
-    <div class="flex items-center space-x-6">
-      <form class="hidden lg:flex items-center bg-gray-200 rounded-2xl overflow-hidden" action="#">
+
+  </section>
+  <!-- Start Sidebar Menu Mobile -->
+  <aside id="sidebar"
+    class="lg:hidden top-15 right-0 z-50 fixed bg-white/92 shadow-xl bg-blur-xl w-68 h-full transition-transform translate-x-full duration-300 ease-in-out transform">
+    <div class="p-4">
+      <!-- Sidebar Content -->
+      <h2 class="mb-4 font-bold text-xl">Navigation</h2>
+
+      <form class="flex items-center bg-gray-200 mb-2 rounded-full overflow-hidden" action="#">
         <input class="py-2 ps-4 pe-1.5 focus:border-transparent focus:outline-none focus:ring-0 w-55 text-sm"
           type="search" placeholder="What are you looking for?">
         <button type="button" class="right-2 relative text-xl" type="submit"><i
             class="fa-solid fa-magnifying-glass"></i></button>
       </form>
-      <div class="space-x-4 text-2xl">
-        <button type="button"><i class="fa-regular fa-heart"></i></button>
-        <button type="button"><i class="fa-solid fa-cart-shopping"></i></button>
-        <button type="button" class="relative p-4" id="hamburger">
-          <div class="space-y-1.25">
-            <span class="block bg-gray-800 w-6 h-0.5 transition-all duration-300"></span>
-            <span class="block bg-gray-800 w-6 h-0.5 transition-all duration-300"></span>
-            <span class="block bg-gray-800 w-6 h-0.5 transition-all duration-300"></span>
-          </div>
-        </button>
-      </div>
+      <nav class="flex flex-col w-full">
+        <a class="group relative px-1 py-2" href="#">Home
+          <span
+            class="bottom-0 left-0 absolute bg-gray-600 w-full h-0.25 scale-x-100 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+        </a>
+        <a class="group relative px-1 py-2" href="#">Contact
+          <span
+            class="bottom-0 left-0 absolute bg-gray-600 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+
+        </a>
+        <a class="group relative px-1 py-2" href="#">About
+          <span
+            class="bottom-0 left-0 absolute bg-gray-600 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+
+        </a>
+        <a class="group relative px-1 py-2" href="#">Sign Up
+          <span
+            class="bottom-0 left-0 absolute bg-gray-600 w-full h-0.25 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 transform"></span>
+
+        </a>
+      </nav>
+
     </div>
-  </section>
+  </aside>
+
+
+
   <h1 class="font-bold text-3xl underline">
     Hello world!
   </h1>
 
   <script>
-    const button = document.getElementById( 'hamburger' );
+    const button = document.querySelector( '#hamburger' );
     const spans = button.querySelectorAll( 'span' );
+    const sidebar = document.getElementById( 'sidebar' );
 
+    // Add click event listener to document
+    document.addEventListener( 'click', function ( event ) {
+      // Check if the click is outside the div
+      if ( button.classList.contains( 'open' ) ) {
+        if ( !button.contains( event.target ) && !sidebar.contains( event.target ) ) {
+          handleSidebar();
+          transformButton();
+        }
+      }
+    } );
+
+    // Add click event listener to document
     button.addEventListener( 'click', () => {
+      handleSidebar();
+      transformButton();
+    } );
+
+    function handleSidebar() {
+      sidebar.classList.toggle( 'translate-x-full' );
+      sidebar.classList.toggle( 'translate-x-0' );
+    }
+
+    function transformButton() {
+
       button.classList.toggle( 'open' );
 
       if ( button.classList.contains( 'open' ) ) {
@@ -91,7 +160,7 @@
         spans[ 1 ].style.opacity = '1';
         spans[ 2 ].style.transform = 'rotate(0) translate(0, 0)';
       }
-    } );
+    }
   </script>
 </body>
 
